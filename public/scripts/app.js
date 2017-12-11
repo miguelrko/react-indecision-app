@@ -30,19 +30,27 @@ var Counter = function (_React$Component) {
 		value: function handleAddOne() {
 			this.setState(function (prevState) {
 				return {
-					count: prevState.count += 1
+					count: prevState.count + 1
 				};
 			});
 		}
 	}, {
 		key: 'handleMinusOne',
 		value: function handleMinusOne() {
-			console.log('Minus one');
+			this.setState(function (prevState) {
+				return {
+					count: prevState.count - 1
+				};
+			});
 		}
 	}, {
 		key: 'handleReset',
 		value: function handleReset() {
-			console.log('Reset');
+			this.setState(function () {
+				return {
+					count: 0
+				};
+			});
 		}
 	}, {
 		key: 'render',
